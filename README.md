@@ -35,55 +35,82 @@ Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
-Program:
+Program :
+Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming
+HALF ADDER:
+
 module expfour(a,b,c,d,f);
+
 input a,b,c,d;
+
 output f;
+
 wire f1,f2,f3;
+
 assign f1 = (~c&~b&~a);
+
 assign f2 = (~d&~c&~a);
+
 assign f3 = (c&~(~b)&~a);
+
 assign f= f1&~f2&~f3;
+
 endmodule
-PROGRAM 2:
+
+
+FULL ADDER:
+
 module expfourtwo(a,b,c,d,f);
+
 input a,b,c,d;
+
 output f;
+
 wire f1,f2,f3,f4;
+
 assign f1 = c&(~b)&a;
+
 assign f2 = d&(~c)&a;
+
 assign f3 = c&(~b)&a;
+
 assign f4 = ~(f1|f2|f3);
+
 not(f,f4);
+
 endmodule
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+
+
+
 Developed by: Pavithra.Y
 RegisterNumber:  212222050043
 */
-Logic symbol & Truthtable
-PROGRAM 1
-![TRUTH TABLE PROGRAM 1](https://user-images.githubusercontent.com/128951583/233091090-b712f9b1-43e8-4e99-9959-e2fd5002affa.jpg)
-PROGRAM 2
-![TRUTH TABLE PROGRAM 2](https://user-images.githubusercontent.com/128951583/233091234-9c1dd2c0-c4af-45ea-b9b6-61d5392dd633.jpg)
-
-
+Logic symbol
+![image](https://github.com/pavithra2200891/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/128951583/7634eb53-3d14-4a6c-aa65-9cc9a4292181)
 
 RTL REALIZATION
 ### Output:
-PROGRAM 1
-![RTL PROGRAM 1](https://user-images.githubusercontent.com/128951583/233091447-a456d043-f8a7-4647-9097-640dbc52e4ad.jpg)
-PROGRAM 2
-![RTL PROGRAM 2](https://user-images.githubusercontent.com/128951583/233091565-5b7ee09a-04fc-4105-a152-55cc44b2479c.jpg)
+HALF ADDER:
+![image](https://github.com/pavithra2200891/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/128951583/8538b0ba-b941-4c20-a35b-a06f04739efa)
 
+FULL ADDER:
+![image](https://github.com/pavithra2200891/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/128951583/c229cc67-8773-45f2-8849-7c52f3af3f95)
 
-### RTL
-### TIMING DIAGRAM
-PROGRAM 1
-![TIMING DIAGRAM PROGRAM 1](https://user-images.githubusercontent.com/128951583/233091752-15ead1b4-232b-48cd-92e1-f341b550a3ec.jpg)
-PROGRAM 2
-![TIMING DIAGRAM PROGRAM 2](https://user-images.githubusercontent.com/128951583/233091835-6c082524-f616-4507-a3d6-cd55867370be.jpg)
+### RTL TIMING DIAGRAM
+HALF ADDER:
+![image](https://github.com/pavithra2200891/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/128951583/656d7fac-703e-432e-a1a1-e10bfad11b47)
 
+FULL ADDER:
+![image](https://github.com/pavithra2200891/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/128951583/c4592dd3-54f8-415d-847a-94119c5bc679)
 
+###TRUTH TABLE:
+
+HALF ADDER:
+
+![image](https://github.com/pavithra2200891/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/128951583/7b49b05e-71fb-43a2-8a26-f1f73784337e)
+
+FULL ADDER:
+
+![image](https://github.com/pavithra2200891/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/128951583/0f37ad7e-e6d8-402a-a7d6-d7383099e429)
 
 ### Result:thus the given logic functions are implementing using NAND AND nor gates and their operations are verified using VERILOG programming
